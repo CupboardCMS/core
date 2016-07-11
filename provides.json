@@ -1,0 +1,11 @@
+{
+	"providers": [
+		"Cupboard\Core\CupboardServiceProvider"
+	],
+	"aliases": [
+		{
+			"alias": "Cupboard",
+			"facade": "Cupboard\Core\Facades\CupboardFacade"
+		}
+	]
+}
