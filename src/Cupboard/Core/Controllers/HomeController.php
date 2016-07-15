@@ -1,6 +1,6 @@
 <?php namespace Cupboard\Core\Controllers;
 
-use View, Config;
+use Schema, View, Config;
 use Cupboard\Core\Repositories\PostRepositoryInterface;
 
 class HomeController extends BaseController {
@@ -21,6 +21,13 @@ class HomeController extends BaseController {
 	 */
 	public function __construct(PostRepositoryInterface $posts)
 	{
+
+                if (!Schema::hasTable('posts'))
+                {
+                     header('Location: install');
+                     exit;
+                }
+
 		parent::__construct();
 
 		$this->posts = $posts;

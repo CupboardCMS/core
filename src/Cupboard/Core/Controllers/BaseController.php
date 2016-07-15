@@ -27,15 +27,6 @@ class BaseController extends Controller {
 		$presence = Validator::getPresenceVerifier();
 		$presence->setConnection('cupboard');
 
-		// Redirect to /install if in framework and not installed
-		if (Config::get('core::cupboard.in_framework') === true) {
-
-			if (Config::get("core::cupboard.installed") !== true)
-			{
-				header('Location: install');
-				exit;
-			}
-		}
 	}
 
 	/**
