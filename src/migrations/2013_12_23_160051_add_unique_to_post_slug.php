@@ -24,7 +24,7 @@ class AddUniqueToPostSlug extends Migration {
 	public function down()
 	{
 	    Schema::table('posts', function($t) {
-	      $t->dropUnique('slug');
+	      $t->dropUnique('posts_slug_unique');
 	    });
 	}
 

@@ -22,7 +22,7 @@ class HomeController extends BaseController {
 	public function __construct(PostRepositoryInterface $posts)
 	{
 
-                if (!Schema::hasTable('posts'))
+                if (!Schema::hasTable('services'))
                 {
                      header('Location: install');
                      exit;
